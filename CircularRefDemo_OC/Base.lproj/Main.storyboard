@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8cv-PC-8qR">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="y5m-qn-W5K">
+            <objects>
+                <navigationController id="8cv-PC-8qR" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Xl-vv-OtZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6T2-G9-IUD" kind="relationship" relationship="rootViewController" id="W2X-f7-2xi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eWP-7c-g1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9" y="226"/>
+        </scene>
+        <!--CircularRef-->
+        <scene sceneID="keq-9S-n2N">
+            <objects>
+                <viewController id="6T2-G9-IUD" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cHq-MS-scl"/>
+                        <viewControllerLayoutGuide type="bottom" id="AnI-je-D7m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VOL-jh-5hZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icU-FQ-vjd">
+                                <rect key="frame" x="148" y="319" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.96078431606292725" green="0.96078431606292725" blue="0.96078431606292725" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="DdB-b6-e7Y"/>
+                                </constraints>
+                                <state key="normal" title="开始测试"/>
+                                <connections>
+                                    <segue destination="wTz-Ab-Knn" kind="show" id="sTb-e9-Obo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="icU-FQ-vjd" firstAttribute="centerX" secondItem="VOL-jh-5hZ" secondAttribute="centerX" id="4Ta-kA-k3A"/>
+                            <constraint firstItem="icU-FQ-vjd" firstAttribute="centerY" secondItem="VOL-jh-5hZ" secondAttribute="centerY" id="oPO-HP-Bx9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CircularRef" id="fSm-AH-i54"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="skC-7u-mGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="571.5" y="225.5"/>
+        </scene>
+        <!--One View Controller-->
+        <scene sceneID="axP-gN-3FV">
+            <objects>
+                <viewController storyboardIdentifier="OneViewController" id="wTz-Ab-Knn" customClass="OneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0IA-I1-BoA"/>
+                        <viewControllerLayoutGuide type="bottom" id="37F-ad-zss"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c6t-U1-QPq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwe-wk-Uor">
+                                <rect key="frame" x="88" y="299" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.96078431606292725" green="0.96078431606292725" blue="0.96078431606292725" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="MFj-RJ-Blj"/>
+                                </constraints>
+                                <state key="normal" title="Delegate No Circular Ref"/>
+                                <connections>
+                                    <action selector="delegateNoCircularRefButtonClick" destination="wTz-Ab-Knn" eventType="touchUpInside" id="da2-sG-oTu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voB-fi-GAN">
+                                <rect key="frame" x="88" y="339" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.96078431610000004" green="0.96078431610000004" blue="0.96078431610000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="dDq-Xd-S5S"/>
+                                </constraints>
+                                <state key="normal" title="Block Circular Ref"/>
+                                <connections>
+                                    <action selector="blockCircularRefButtonClick" destination="wTz-Ab-Knn" eventType="touchUpInside" id="i7j-SF-g7l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zF-og-w0h">
+                                <rect key="frame" x="88" y="379" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.96078431610000004" green="0.96078431610000004" blue="0.96078431610000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="12N-8a-Dou"/>
+                                </constraints>
+                                <state key="normal" title="Block No Circular Ref"/>
+                                <connections>
+                                    <action selector="blockNoCircularRefButtonClick" destination="wTz-Ab-Knn" eventType="touchUpInside" id="P2q-KR-6ly"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0OI-Ng-KtU">
+                                <rect key="frame" x="88" y="259" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.96078431606292725" green="0.96078431606292725" blue="0.96078431606292725" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="baO-C0-477"/>
+                                </constraints>
+                                <state key="normal" title="Delegate Circular Ref"/>
+                                <connections>
+                                    <action selector="delegateCircularRefButtonClick" destination="wTz-Ab-Knn" eventType="touchUpInside" id="MKK-kC-Okd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0OI-Ng-KtU" firstAttribute="centerX" secondItem="c6t-U1-QPq" secondAttribute="centerX" id="02Z-Gh-rr4"/>
+                            <constraint firstItem="6zF-og-w0h" firstAttribute="centerX" secondItem="c6t-U1-QPq" secondAttribute="centerX" id="EE0-nv-9DY"/>
+                            <constraint firstItem="0OI-Ng-KtU" firstAttribute="centerY" secondItem="c6t-U1-QPq" secondAttribute="centerY" constant="-60" id="VjS-At-I6R"/>
+                            <constraint firstItem="fwe-wk-Uor" firstAttribute="centerX" secondItem="c6t-U1-QPq" secondAttribute="centerX" id="bfQ-FX-ldG"/>
+                            <constraint firstItem="voB-fi-GAN" firstAttribute="centerY" secondItem="c6t-U1-QPq" secondAttribute="centerY" constant="20" id="btB-5J-iYX"/>
+                            <constraint firstItem="voB-fi-GAN" firstAttribute="centerX" secondItem="c6t-U1-QPq" secondAttribute="centerX" id="n4w-Ts-tcv"/>
+                            <constraint firstItem="6zF-og-w0h" firstAttribute="centerY" secondItem="c6t-U1-QPq" secondAttribute="centerY" constant="60" id="v4C-kb-DoD"/>
+                            <constraint firstItem="fwe-wk-Uor" firstAttribute="centerY" secondItem="c6t-U1-QPq" secondAttribute="centerY" constant="-20" id="xcD-zm-Vkl"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zWe-17-1vW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1077.5" y="225.5"/>
+        </scene>
+    </scenes>
+</document>
